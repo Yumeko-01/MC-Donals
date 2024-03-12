@@ -4,10 +4,39 @@
  */
 package co.edu.unipiloto.estdatos.colas.interfaz;
 
+import java.time.LocalDateTime;
+
 /**
  *
  * @author medin
  */
 public class Pedido {
-    
+
+    private LocalDateTime horaPedido;
+    private Producto producto;
+    private String direccion;
+    private boolean esDomicilio;
+
+    public Pedido(Producto producto, String direccion, boolean esDomicilio) {
+        this.horaPedido = LocalDateTime.now();
+        this.producto = producto;
+        this.direccion = direccion;
+        this.esDomicilio = esDomicilio;
+    }
+
+    public LocalDateTime getHoraPedido() {
+        return horaPedido;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public boolean esDomicilio() {
+        return esDomicilio;
+    }
 }

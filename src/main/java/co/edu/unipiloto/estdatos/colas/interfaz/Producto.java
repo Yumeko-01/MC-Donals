@@ -4,23 +4,31 @@
  */
 package co.edu.unipiloto.estdatos.colas.interfaz;
 
-import java.util.Iterator;
-
 /**
  *
  * @author medin
  */
-public class Producto<T> implements Iterable<T> {
-    
-    private String nombre;
-    private String tiempoEspera;
-    private String costo;
+public class Producto {
 
-    @Override
-    public Iterator<T> iterator() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private String nombre;
+    private long tiempoPreparacion;
+    private double costo;
+
+    public Producto(String nombre, long tiempoPreparacion, double costo) {
+        this.nombre = nombre;
+        this.tiempoPreparacion = tiempoPreparacion;
+        this.costo = costo;
     }
-    
-    
-    
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public long getTiempoPreparacion() {
+        return tiempoPreparacion;
+    }
+
+    public double getCosto() {
+        return costo;
+    }
 }

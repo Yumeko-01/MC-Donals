@@ -6,10 +6,6 @@ package co.edu.unipiloto.estdatos.colas.interfaz;
 
 import java.time.LocalDateTime;
 
-/**
- *
- * @author medin
- */
 public class Pedido {
 
     private LocalDateTime horaPedido;
